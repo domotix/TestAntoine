@@ -3,6 +3,10 @@ TestAntoine::Application.routes.draw do
 
   get "home/index"
   root 'home#index'
+  
+  #Cela signifie que nous déclarons l'url /shows/1/book par exemple, et que les requêtes qui arrivent sur cette url en POST (début de ligne) serons traitées par la méthode book du controller shows
+  post 'shows/:id/book' => 'shows#book'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
